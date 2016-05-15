@@ -82,6 +82,16 @@ nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <C-\> :TmuxNavigatePrevious<cr>
 
+" ~/.tmux.conf
+" # Smart pane switching with awareness of vim splits
+" # See: https://github.com/christoomey/vim-tmux-navigator
+" is_vim='echo "#{pane_current_command}" | grep -iqE "(^|\/)g?(view|n?vim?x?)(diff)?$"'
+" bind -n C-h if-shell "$is_vim" "send-keys C-h" "select-pane -L"
+" bind -n C-j if-shell "$is_vim" "send-keys C-j" "select-pane -D"
+" bind -n C-k if-shell "$is_vim" "send-keys C-k" "select-pane -U"
+" bind -n C-l if-shell "$is_vim" "send-keys C-l" "select-pane -R"
+" bind -n C-\ if-shell "$is_vim" "send-keys C-\\" "select-pane -l"
+
 " ctrlp
 let g:ctrlp_working_path_mode = 'ra' " set local working directory
 let g:ctrlp_map = '<C-P>'            " command to invoke CtrlP
