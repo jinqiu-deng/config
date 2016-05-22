@@ -1,0 +1,20 @@
+[user]
+    name = Jinqiu Deng
+    email = deng.jinqiu@gmail.com
+[color]
+    ui = true
+    status = true
+    branch = true
+[alias]
+    ls  = log --pretty=format:"%C(yellow)%H\\ %Creset%ad\\ %Cgreen[%cn]%n%Cred%d\\ %Creset%B" --decorate --date=iso-local --stat
+    ls1 = "!clear; git ls -1"
+    ls2 = "!clear; git ls -2"
+    ls3 = "!clear; git ls -3"
+
+    f = "!git ls-files | grep -i"
+    g = "!clear; git grep -Ii"
+    gn = "!git g --name-only"
+
+    wd = "!clear; git diff --word-diff"
+
+    sf = "svn fetch"
