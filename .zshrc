@@ -3,7 +3,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/jinqiu/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 export VG_NAME=corbin-supreme-2
 
