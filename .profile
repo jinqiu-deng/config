@@ -50,11 +50,6 @@ if [ ! -d "$ZSH" ]; then
     }
 fi
 
-# Create symbol link for bullet-train theme
-if [ ! -e "$ZSH/themes/bullet-train.zsh-theme" ]; then
-    ln -s $BULLET_TRAIN/bullet-train.zsh-theme $ZSH/themes/bullet-train.zsh-theme
-fi
-
 # Download .vimrc
 if [ ! -e "$HOME/.vimrc" ]; then
     printf "Download .vimrc\n"
