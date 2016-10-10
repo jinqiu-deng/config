@@ -1,11 +1,10 @@
-
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$HOME/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
-
-export VG_NAME=corbin-supreme-2
+export VG_NAME=eagle-precis-1
+export PD_NAME=adhoc04-sjc1
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -56,6 +55,7 @@ ZSH_THEME="ys"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
+plugins=(vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -88,3 +88,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # alias vim='/usr/local/bin/vim'
+# alias dssh="boxer v "$VG_NAME
+# alias pssh="ssh "$PD_NAME
+
+bindkey -v
