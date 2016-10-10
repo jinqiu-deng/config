@@ -8,7 +8,6 @@ call vundle#begin()
     Plugin 'easymotion/vim-easymotion'
     Plugin 'vim-airline/vim-airline'
     Plugin 'vim-airline/vim-airline-themes'
-    Plugin 'christoomey/vim-tmux-navigator'
     Plugin 'kien/ctrlp.vim'
     Plugin 'airblade/vim-gitgutter'
     Plugin 'tomtom/tcomment_vim'
@@ -73,24 +72,6 @@ colorscheme solarized
 let g:airline#extensions#tabline#enabled = 1    " enable buffer bar
 let g:airline#extensions#whitespace#checks = [] " disable white space checking
 let g:airline_theme='bubblegum'                 " set airline theme
-
-" tmux navigator
-let g:tmux_navigator_no_mappings = 1
-nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
-nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
-nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
-nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
-nnoremap <silent> <C-\> :TmuxNavigatePrevious<cr>
-
-" ~/.tmux.conf
-" # Smart pane switching with awareness of vim splits
-" # See: https://github.com/christoomey/vim-tmux-navigator
-" is_vim='echo "#{pane_current_command}" | grep -iqE "(^|\/)g?(view|n?vim?x?)(diff)?$"'
-" bind -n C-h if-shell "$is_vim" "send-keys C-h" "select-pane -L"
-" bind -n C-j if-shell "$is_vim" "send-keys C-j" "select-pane -D"
-" bind -n C-k if-shell "$is_vim" "send-keys C-k" "select-pane -U"
-" bind -n C-l if-shell "$is_vim" "send-keys C-l" "select-pane -R"
-" bind -n C-\ if-shell "$is_vim" "send-keys C-\\" "select-pane -l"
 
 " ctrlp
 let g:ctrlp_working_path_mode = 'ra' " set local working directory
