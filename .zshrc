@@ -5,6 +5,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:$HOME/bin:$PATH
 export ZSH=~/.oh-my-zsh
 export VG_NAME=eagle-precis-1
 export PD_NAME=adhoc04-sjc1
+export TZ=/usr/share/zoneinfo/PST8PDT
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
