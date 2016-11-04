@@ -3,7 +3,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:$HOME/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
-export VG_NAME=eagle-precis-1
+export VG_NAME=jinqiu
 export PD_NAME=adhoc04-sjc1
 export TZ=/usr/share/zoneinfo/PST8PDT
 
