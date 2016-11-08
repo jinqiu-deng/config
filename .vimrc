@@ -81,7 +81,7 @@ let g:ctrlp_cmd = 'CtrlPBuffer'      " wake up with files in buffer
 nnoremap <C-N> :NERDTree<CR> " open NERDTree
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '_'
-let g:NERDTreeIgnore =['^00.*', '\.tsk$', '\.o$', '\.dd$', '\.d$', '\~$', '.*\.sundev*', '.*\.linux*'] " ignore these file in NERDTree
+let g:NERDTreeIgnore =['\.pyc$'] " ignore these file in NERDTree
 let g:NERDTreeMapJumpPrevSibling ='\<C-J>' " change shortcut to avoid conflict
 let g:NERDTreeMapJumpNextSibling ='\<C-K>' " change shortcut to avoid conflict
 
