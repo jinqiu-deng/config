@@ -14,6 +14,7 @@ call vundle#begin()
     Plugin 'ntpeters/vim-better-whitespace'
     Plugin 'altercation/vim-colors-solarized'
     Plugin 'jiangmiao/auto-pairs'
+    Plugin 'christoomey/vim-tmux-navigator'
 call vundle#end()
 
 " vim
@@ -29,29 +30,30 @@ nnoremap > <C-W>> " decrease pane size horizontal
 
 vmap // y/<C-R>"<CR><S-n>zz " search a word after selecting
 
-set tabstop    =4       " Insert 4 spaces for a tab
-set shiftwidth =4       " Insert 4 for indentation
-set expandtab           " Insert space characters whenever the tab key is pressed
-set number              " Show line number
-set cursorline          " Hight light the current line
-set cursorcolumn        " Hight light the current column
-set autoindent          " Copy the indent from the previous line
-set hlsearch            " hight light the search result
-set t_Co       =256     " 256 color
-set ambiwidth  =double  " Full width
-set incsearch           " Showing matches while searching
-set nobackup            " do not generate tmp file
-set noswapfile          " do not generate tmp file
-set autoread            " auto read update
+set tabstop    =4        " Insert 4 spaces for a tab
+set shiftwidth =4        " Insert 4 for indentation
+set expandtab            " Insert space characters whenever the tab key is pressed
+set number               " Show line number
+set cursorline           " Hight light the current line
+set cursorcolumn         " Hight light the current column
+set autoindent           " Copy the indent from the previous line
+set hlsearch             " hight light the search result
+set t_Co       =256      " 256 color
+set ambiwidth  =double   " Full width
+set incsearch            " Showing matches while searching
+set nobackup             " do not generate tmp file
+set noswapfile           " do not generate tmp file
+set autoread             " auto read update
 set wildmenu
-set whichwrap  =h,l     " continue move to the next line
+set whichwrap  =h,l      " continue move to the next line
 set guifont    =Monospace\ 14
 set backspace  =indent,eol,start
 set encoding   =utf-8
 set colorcolumn=80
-set clipboard  =unnamed " Setup the system clipboard
+set clipboard  +=unnamed " Setup the system clipboard
 set wildmode   =longest,list,full " tab completion for command
-set laststatus =2       "show status all the time
+set laststatus =2        " show status all the time
+set mouse=a              " enable mouse
 
 " gvim
 " set guioptions -=m " remove menu bar
