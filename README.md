@@ -1,1 +1,1 @@
-Jinqiu Deng vimrc
+Jinqiu Deng config
