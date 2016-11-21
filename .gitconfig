@@ -6,7 +6,7 @@
     status = true
     branch = true
 [alias]
-    ls  = log --pretty=format:"%C(yellow)%H\\ %Creset%ad\\ %Cgreen[%cn]%n%Cred%d\\ %Creset%B" --decorate --date=iso-local --stat
+    ls  = log --pretty=format:"%C(yellow)%H\\ %Creset%ad\\ %Cgreen[%cn]%n%Cred%d\\ %Creset%B" --decorate --date=iso8601 --stat
     ls1 = "!clear; git ls -1"
     ls2 = "!clear; git ls -2"
     ls3 = "!clear; git ls -3"
