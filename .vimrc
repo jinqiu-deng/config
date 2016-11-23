@@ -15,6 +15,7 @@ call vundle#begin()
     Plugin 'altercation/vim-colors-solarized'
     Plugin 'jiangmiao/auto-pairs'
     Plugin 'christoomey/vim-tmux-navigator'
+    Plugin 'klen/python-mode'
 call vundle#end()
 
 " vim
@@ -102,3 +103,11 @@ let g:gitgutter_max_signs = 1000
 let g:tcommentMapLeader1 = ''
 noremap <Leader>c :TComment<cr>
 vnoremap <Leader>c :TCommentMaybeInline<cr>
+
+" python-mode
+let g:pymode_folding = 0
+let g:pymode_breakpoint_cmd = 'import pdb; pdb.set_trace() # vim is awesome'
+let g:python_lint = 0
+let g:pymode_rope_completion = 0
+let g:pymode_options_max_line_length = 150
+let g:pymode_rope = 0
