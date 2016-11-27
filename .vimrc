@@ -3,20 +3,28 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
     Plugin 'gmarik/Vundle.vim'
-    Plugin 'scrooloose/nerdtree'
+    Plugin 'Raimondi/delimitMate'
+    Plugin 'Valloric/YouCompleteMe'
+    Plugin 'Yggdroot/indentLine'
+    Plugin 'airblade/vim-gitgutter'
+    Plugin 'altercation/vim-colors-solarized'
+    Plugin 'christoomey/vim-tmux-navigator'
+    Plugin 'ctrlpvim/ctrlp.vim'
+    Plugin 'dylanaraps/root.vim'
     Plugin 'easymotion/vim-easymotion'
+    Plugin 'godlygeek/tabular'
+    Plugin 'majutsushi/tagbar'
+    Plugin 'mhinz/vim-startify'
+    Plugin 'ntpeters/vim-better-whitespace'
+    Plugin 'scrooloose/nerdcommenter'
+    Plugin 'scrooloose/nerdtree'
+    Plugin 'tpope/vim-fugitive'
     Plugin 'vim-airline/vim-airline'
     Plugin 'vim-airline/vim-airline-themes'
-    Plugin 'kien/ctrlp.vim'
-    Plugin 'airblade/vim-gitgutter'
-    Plugin 'tomtom/tcomment_vim'
-    Plugin 'tpope/vim-fugitive'
-    Plugin 'ntpeters/vim-better-whitespace'
-    Plugin 'altercation/vim-colors-solarized'
-    Plugin 'jiangmiao/auto-pairs'
-    Plugin 'christoomey/vim-tmux-navigator'
-    Plugin 'klen/python-mode'
+    Plugin 'vim-syntastic/syntastic'
 call vundle#end()
+
+filetype plugin on
 
 " vim
 nnoremap <C-J> <C-W>j " select the active split
@@ -55,6 +63,10 @@ set clipboard  +=unnamed " Setup the system clipboard
 set wildmode   =longest,list,full " tab completion for command
 set laststatus =2        " show status all the time
 set mouse=a              " enable mouse
+if &term =~ '^screen'
+    " tmux knows the extended mouse mode
+    set ttymouse=xterm2
+endif
 
 " gvim
 " set guioptions -=m " remove menu bar
@@ -78,13 +90,13 @@ let g:airline_theme='bubblegum'                 " set airline theme
 " ctrlp
 let g:ctrlp_working_path_mode = 'ra' " set local working directory
 let g:ctrlp_map = '<C-P>'            " command to invoke CtrlP
-let g:ctrlp_cmd = 'CtrlPBuffer'      " wake up with files in buffer
+let g:ctrlp_cmd = 'CtrlP'            " wake up with files
+nnoremap <C-M> :CtrlPMRU<CR>         " find Most-Recently-Used file
 
 " nerd tree
-nnoremap <C-N> :NERDTree<CR> " open NERDTree
-let g:NERDTreeDirArrowExpandable = '+'
-let g:NERDTreeDirArrowCollapsible = '_'
-let g:NERDTreeIgnore =['\.pyc$'] " ignore these file in NERDTree
+nnoremap <C-W> :NERDTree %:p:h<CR>         " open NERDTree in current directory
+nnoremap <C-N> :NERDTree<CR>               " open NERDTree
+let g:NERDTreeIgnore =['\.pyc$']           " ignore these file in NERDTree
 let g:NERDTreeMapJumpPrevSibling ='\<C-J>' " change shortcut to avoid conflict
 let g:NERDTreeMapJumpNextSibling ='\<C-K>' " change shortcut to avoid conflict
 
@@ -99,15 +111,19 @@ nmap [s <Plug>GitGutterNextHunk
 nmap [w <Plug>GitGutterPrevHunk
 let g:gitgutter_max_signs = 1000
 
-" tcomment_vim
-let g:tcommentMapLeader1 = ''
-noremap <Leader>c :TComment<cr>
-vnoremap <Leader>c :TCommentMaybeInline<cr>
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
-" python-mode
-let g:pymode_folding = 0
-let g:pymode_breakpoint_cmd = 'import pdb; pdb.set_trace() # vim is awesome'
-let g:python_lint = 0
-let g:pymode_rope_completion = 0
-let g:pymode_options_max_line_length = 150
-let g:pymode_rope = 0
+" indentLine
+let g:indentLine_color_term = 239
+
+" dylanaraps root
+let g:root#auto = 1
+let g:root#echo = 0
+let g:root#patterns = ['.git', '_darcs', '.hg', '.bzr', '.svn']
