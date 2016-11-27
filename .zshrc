@@ -3,7 +3,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:$HOME/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
-export VG_NAME=mclaren-savana-7
+export VG_NAME=lexus-quest-9
 export PD_NAME=adhoc04-sjc1
 export TZ=/usr/share/zoneinfo/PST8PDT
 
@@ -88,7 +88,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vim='/usr/local/bin/vim'
+# alias vim='/usr/local/bin/vim'
 alias dssh="boxer v "$VG_NAME
 alias pssh="ssh "$PD_NAME
 alias sync="boxer sync "$VG_NAME" uber/promotions uber/cronus"
