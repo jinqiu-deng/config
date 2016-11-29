@@ -11,7 +11,9 @@ export TZ=/usr/share/zoneinfo/PST8PDT
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="dst"
-ZSH_THEME="ys"
+ZSH_THEME="bullet-train"
+
+ITERM_CURSOR=true
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -55,8 +57,7 @@ ZSH_THEME="ys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-plugins=(vi-mode)
+plugins=(git vim-mode)
 
 source $ZSH/oh-my-zsh.sh
 
