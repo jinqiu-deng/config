@@ -4,7 +4,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
     Plugin 'gmarik/Vundle.vim'
     Plugin 'Raimondi/delimitMate'
-    " Plugin 'Valloric/YouCompleteMe'
+    Plugin 'Valloric/YouCompleteMe'
     Plugin 'Yggdroot/indentLine'
     Plugin 'airblade/vim-gitgutter'
     Plugin 'altercation/vim-colors-solarized'
@@ -22,6 +22,7 @@ call vundle#begin()
     Plugin 'vim-airline/vim-airline'
     Plugin 'vim-airline/vim-airline-themes'
     Plugin 'vim-syntastic/syntastic'
+    Plugin 'sjl/vitality.vim'
 call vundle#end()
 
 filetype plugin on
@@ -115,6 +116,8 @@ let g:gitgutter_max_signs = 1000
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+let g:syntastic_mode_map = { 'mode': 'passive' }
+let g:syntastic_python_checker_args='--ignore=E501'
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -127,3 +130,25 @@ let g:indentLine_color_term = 239
 let g:root#auto = 1
 let g:root#echo = 0
 let g:root#patterns = ['.git', '_darcs', '.hg', '.bzr', '.svn']
+
+" startify_custom_header
+let g:startify_custom_header = [
+\ '',
+\ '',
+\ '',
+\ '',
+\ '',
+\ '                   $$\    $$\ $$$$$$\ $$\      $$\       $$\   $$\ $$$$$$$\',
+\ '                   $$ |   $$ |\_$$  _|$$$\    $$$ |      $$$\  $$ |$$  __$$\',
+\ '                   $$ |   $$ |  $$ |  $$$$\  $$$$ |      $$$$\ $$ |$$ |  $$ |',
+\ '                   \$$\  $$  |  $$ |  $$\$$\$$ $$ |      $$ $$\$$ |$$$$$$$\ |',
+\ '                    \$$\$$  /   $$ |  $$ \$$$  $$ |      $$ \$$$$ |$$  __$$\',
+\ '                     \$$$  /    $$ |  $$ |\$  /$$ |      $$ |\$$$ |$$ |  $$ |',
+\ '                      \$  /   $$$$$$\ $$ | \_/ $$ |      $$ | \$$ |$$$$$$$  |',
+\ '                       \_/    \______|\__|     \__|      \__|  \__|\_______/',
+\ '',
+\ '',
+\ '',
+\ '',
+\ ''
+\ ]
