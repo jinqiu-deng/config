@@ -10,20 +10,10 @@ export TZ=/usr/share/zoneinfo/PST8PDT
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# ZSH_THEME="dst"
+#
+# theme bullet-train
 ZSH_THEME="bullet-train"
-
-BULLETTRAIN_CONTEXT_DEFAULT_USER='jinqiu'
-BULLETTRAIN_CONTEXT_HOSTNAME='%M'
-BULLETTRAIN_IS_SSH_CLIENT=true
-BULLETTRAIN_PROMPT_ORDER=(
-  git
-  context
-  dir
-  time
-)
-
-# ITERM_CURSOR=true
+BULLETTRAIN_CONTEXT_SHOW=true
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
