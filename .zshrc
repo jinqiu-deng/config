@@ -13,7 +13,17 @@ export TZ=/usr/share/zoneinfo/PST8PDT
 # ZSH_THEME="dst"
 ZSH_THEME="bullet-train"
 
-ITERM_CURSOR=true
+BULLETTRAIN_CONTEXT_DEFAULT_USER='jinqiu'
+BULLETTRAIN_CONTEXT_HOSTNAME='%M'
+BULLETTRAIN_IS_SSH_CLIENT=true
+BULLETTRAIN_PROMPT_ORDER=(
+  git
+  context
+  dir
+  time
+)
+
+# ITERM_CURSOR=true
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -57,7 +67,7 @@ ITERM_CURSOR=true
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vim-mode)
+plugins=(git vim-mode vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
