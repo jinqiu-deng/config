@@ -4,7 +4,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
     Plugin 'gmarik/Vundle.vim'
     Plugin 'Raimondi/delimitMate'
-    " Plugin 'Valloric/YouCompleteMe'
+    Plugin 'Valloric/YouCompleteMe'
     Plugin 'Yggdroot/indentLine'
     Plugin 'airblade/vim-gitgutter'
     Plugin 'altercation/vim-colors-solarized'
@@ -18,11 +18,14 @@ call vundle#begin()
     Plugin 'ntpeters/vim-better-whitespace'
     Plugin 'scrooloose/nerdcommenter'
     Plugin 'scrooloose/nerdtree'
+    Plugin 'sjl/vitality.vim'
     Plugin 'tpope/vim-fugitive'
     Plugin 'vim-airline/vim-airline'
     Plugin 'vim-airline/vim-airline-themes'
     Plugin 'vim-syntastic/syntastic'
-    Plugin 'sjl/vitality.vim'
+    Plugin 'xolox/vim-easytags'
+    Plugin 'xolox/vim-misc'
+    Plugin 'kana/vim-arpeggio'
 call vundle#end()
 
 filetype plugin on
@@ -60,7 +63,7 @@ set guifont    =Monospace\ 14
 set backspace  =indent,eol,start
 set encoding   =utf-8
 set colorcolumn=80
-" set clipboard  +=unnamed " Setup the system clipboard
+set clipboard  +=unnamed " Setup the system clipboard
 set wildmode   =longest,list,full " tab completion for command
 set laststatus =2        " show status all the time
 set mouse=a              " enable mouse
@@ -84,9 +87,13 @@ colorscheme solarized
 :highlight clear SignColumn
 
 " airline
-let g:airline#extensions#tabline#enabled = 1    " enable buffer bar
-let g:airline#extensions#whitespace#checks = [] " disable white space checking
 let g:airline_theme='bubblegum'                 " set airline theme
+let g:airline#extensions#whitespace#checks = [] " disable white space checking
+let g:airline#extensions#tagbar#enabled = 0     " disable tag
+let g:airline#extensions#hunks#enabled = 0      " disable git change
+let g:airline_section_x = ""                    " disable file type
+let g:airline_section_y = ""                    " disable fileencoding
+let g:airline#extensions#virtualenv#enabled = 0 " disable virtualenv
 
 " ctrlp
 let g:ctrlp_working_path_mode = 'ra' " set local working directory
@@ -95,7 +102,7 @@ let g:ctrlp_cmd = 'CtrlP'            " wake up with files
 nnoremap <C-M> :CtrlPMRU<CR>         " find Most-Recently-Used file
 
 " nerd tree
-nnoremap <C-W> :NERDTree %:p:h<CR>         " open NERDTree in current directory
+nnoremap <C-I> :NERDTree %:p:h<CR>         " open NERDTree in current directory
 nnoremap <C-N> :NERDTree<CR>               " open NERDTree
 let g:NERDTreeIgnore =['\.pyc$']           " ignore these file in NERDTree
 let g:NERDTreeMapJumpPrevSibling ='\<C-J>' " change shortcut to avoid conflict
@@ -130,6 +137,21 @@ let g:indentLine_color_term = 239
 let g:root#auto = 1
 let g:root#echo = 0
 let g:root#patterns = ['.git', '_darcs', '.hg', '.bzr', '.svn']
+
+" you complete me
+let g:ycm_auto_trigger = 0
+
+" nerd commenter
+let g:NERDSpaceDelims = 0
+let g:ycm_show_diagnostics_ui = 0
+
+" easytags
+let g:easytags_cmd = '/usr/local/bin/ctags'
+let g:easytags_async = 1         " Update tag async
+let g:easytags_on_cursorhold = 0 " Doesn't update or highlight your tags
+
+" tags
+" map <C-[> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 " startify_custom_header
 let g:startify_custom_header = [
