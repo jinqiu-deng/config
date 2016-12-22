@@ -4,7 +4,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
     Plugin 'gmarik/Vundle.vim'
     Plugin 'Raimondi/delimitMate'
-    Plugin 'Valloric/YouCompleteMe'
+    " Plugin 'Valloric/YouCompleteMe'
     Plugin 'Yggdroot/indentLine'
     Plugin 'airblade/vim-gitgutter'
     Plugin 'altercation/vim-colors-solarized'
@@ -63,7 +63,7 @@ set guifont    =Monospace\ 14
 set backspace  =indent,eol,start
 set encoding   =utf-8
 set colorcolumn=80
-set clipboard  +=unnamed " Setup the system clipboard
+" set clipboard  +=unnamed " Setup the system clipboard
 set wildmode   =longest,list,full " tab completion for command
 set laststatus =2        " show status all the time
 set mouse=a              " enable mouse
