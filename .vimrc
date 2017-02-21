@@ -4,7 +4,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
     Plugin 'gmarik/Vundle.vim'
     Plugin 'Raimondi/delimitMate'
-    " Plugin 'Valloric/YouCompleteMe'
     Plugin 'Yggdroot/indentLine'
     Plugin 'airblade/vim-gitgutter'
     Plugin 'altercation/vim-colors-solarized'
@@ -23,7 +22,6 @@ call vundle#begin()
     Plugin 'vim-airline/vim-airline'
     Plugin 'vim-airline/vim-airline-themes'
     Plugin 'vim-syntastic/syntastic'
-    Plugin 'xolox/vim-easytags'
     Plugin 'xolox/vim-misc'
     Plugin 'kana/vim-arpeggio'
 call vundle#end()
@@ -63,10 +61,11 @@ set guifont    =Monospace\ 14
 set backspace  =indent,eol,start
 set encoding   =utf-8
 set colorcolumn=80
-" set clipboard  +=unnamed " Setup the system clipboard
+set clipboard  +=unnamed " Setup the system clipboard
 set wildmode   =longest,list,full " tab completion for command
 set laststatus =2        " show status all the time
 set mouse=a              " enable mouse
+set tags=./tags;/
 if &term =~ '^screen'
     " tmux knows the extended mouse mode
     set ttymouse=xterm2
@@ -142,16 +141,8 @@ let g:root#patterns = ['.git', '_darcs', '.hg', '.bzr', '.svn']
 let g:ycm_auto_trigger = 0
 
 " nerd commenter
-let g:NERDSpaceDelims = 0
+let g:NERDSpaceDelims = 1
 let g:ycm_show_diagnostics_ui = 0
-
-" easytags
-let g:easytags_cmd = '/usr/local/bin/ctags'
-let g:easytags_async = 1         " Update tag async
-let g:easytags_on_cursorhold = 0 " Doesn't update or highlight your tags
-
-" tags
-" map <C-[> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 " startify_custom_header
 let g:startify_custom_header = [
