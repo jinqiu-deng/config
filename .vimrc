@@ -24,6 +24,7 @@ call vundle#begin()
     Plugin 'vim-syntastic/syntastic'
     Plugin 'xolox/vim-misc'
     Plugin 'kana/vim-arpeggio'
+    Plugin 'elzr/vim-json'
 call vundle#end()
 
 filetype plugin on
@@ -80,6 +81,7 @@ endif
 syntax enable
 let g:solarized_termcolors=256
 set background =dark
+" set background =light
 colorscheme solarized
 
 " use the same background for git diff
@@ -143,6 +145,9 @@ let g:ycm_auto_trigger = 0
 " nerd commenter
 let g:NERDSpaceDelims = 1
 let g:ycm_show_diagnostics_ui = 0
+
+" vim-json
+let g:vim_json_syntax_conceal = 0 " Disable conceal by default
 
 " startify_custom_header
 let g:startify_custom_header = [
