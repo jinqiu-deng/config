@@ -9,7 +9,7 @@ call vundle#begin()
     Plugin 'altercation/vim-colors-solarized'
     Plugin 'christoomey/vim-tmux-navigator'
     Plugin 'ctrlpvim/ctrlp.vim'
-    Plugin 'dylanaraps/root.vim'
+    Plugin 'airblade/vim-rooter'
     Plugin 'easymotion/vim-easymotion'
     Plugin 'godlygeek/tabular'
     Plugin 'majutsushi/tagbar'
@@ -134,13 +134,9 @@ let g:syntastic_check_on_wq = 0
 " indentLine
 let g:indentLine_color_term = 239
 
-" dylanaraps root
-let g:root#auto = 1
-let g:root#echo = 0
-let g:root#patterns = ['.git', '_darcs', '.hg', '.bzr', '.svn']
-
-" you complete me
-let g:ycm_auto_trigger = 0
+" airblade rooter
+let g:rooter_change_directory_for_non_project_files = 'home'
+let g:rooter_silent_chdir = 1
 
 " nerd commenter
 let g:NERDSpaceDelims = 1
