@@ -25,20 +25,16 @@ call vundle#begin()
     Plugin 'xolox/vim-misc'
     Plugin 'kana/vim-arpeggio'
     Plugin 'elzr/vim-json'
+    Plugin 'mbbill/undotree'
 call vundle#end()
 
 filetype plugin on
 
 " vim
-nnoremap <C-J> <C-W>j " select the active split
-nnoremap <C-K> <C-W>k " select the active split
-nnoremap <C-L> <C-W>l " select the active split
-nnoremap <C-H> <C-W>h " select the active split
-
-nnoremap + <C-W>+ " increase pane size vertical
-nnoremap - <C-W>- " decrease pane size vertical
-nnoremap < <C-W>< " increase pane size horizontal
-nnoremap > <C-W>> " decrease pane size horizontal
+nmap <C-J> <C-W>j " select the active split
+nmap <C-K> <C-W>k " select the active split
+nmap <C-L> <C-W>l " select the active split
+nmap <C-H> <C-W>h " select the active split
 
 vmap // y/<C-R>"<CR><S-n>zz " search a word after selecting
 
@@ -67,6 +63,8 @@ set wildmode   =longest,list,full " tab completion for command
 set laststatus =2        " show status all the time
 set mouse=a              " enable mouse
 set tags=./tags;/
+set foldmethod=indent
+set foldlevel=99
 if &term =~ '^screen'
     " tmux knows the extended mouse mode
     set ttymouse=xterm2
@@ -100,11 +98,12 @@ let g:airline#extensions#virtualenv#enabled = 0 " disable virtualenv
 let g:ctrlp_working_path_mode = 'ra' " set local working directory
 let g:ctrlp_map = '<C-P>'            " command to invoke CtrlP
 let g:ctrlp_cmd = 'CtrlP'            " wake up with files
-nnoremap <C-M> :CtrlPMRU<CR>         " find Most-Recently-Used file
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|\.class\|assembly\|\.pyc'
+nmap <C-M> :CtrlPMRU<CR>         " find Most-Recently-Used file
 
 " nerd tree
-nnoremap <C-I> :NERDTree %:p:h<CR>         " open NERDTree in current directory
-nnoremap <C-N> :NERDTree<CR>               " open NERDTree
+nmap <C-I> :NERDTree %:p:h<CR>         " open NERDTree in current directory
+nmap <C-N> :NERDTree<CR>               " open NERDTree
 let g:NERDTreeIgnore =['\.pyc$']           " ignore these file in NERDTree
 let g:NERDTreeMapJumpPrevSibling ='\<C-J>' " change shortcut to avoid conflict
 let g:NERDTreeMapJumpNextSibling ='\<C-K>' " change shortcut to avoid conflict
@@ -144,6 +143,14 @@ let g:ycm_show_diagnostics_ui = 0
 
 " vim-json
 let g:vim_json_syntax_conceal = 0 " Disable conceal by default
+
+" undotree persistent_undo
+if has("persistent_undo")
+    set undodir=~/.undodir/
+    set undofile
+endif
+nmap <Leader>u :UndotreeToggle<CR>
+
 
 " startify_custom_header
 let g:startify_custom_header = [
