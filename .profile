@@ -53,13 +53,13 @@ fi
 # Download .vimrc
 if [ ! -e "$HOME/.vimrc" ]; then
     printf "Download .vimrc\n"
-    curl "https://raw.githubusercontent.com/DengJinqiu/config/master/.vimrc" -o ~/.vimrc
+    curl "https://raw.githubusercontent.com/jinqiu-deng/config/master/.vimrc" -o ~/.vimrc
 fi
 
 # Download .zshrc
 if [ ! -e "$HOME/.zshrc" ]; then
     printf "Download .zshrc\n"
-    curl "https://raw.githubusercontent.com/DengJinqiu/config/master/.zshrc" -o ~/.zshrc
+    curl "https://raw.githubusercontent.com/jinqiu-deng/config/master/.zshrc" -o ~/.zshrc
 fi
 
 # Download vundle
@@ -72,13 +72,13 @@ fi
 # Download .tmux.conf
 if [ ! -e "$HOME/.tmux.conf" ]; then
     printf "Download tmux.conf"
-    curl "https://raw.githubusercontent.com/DengJinqiu/config/master/.tmux.conf" -o ~/.tmux.conf
+    curl "https://raw.githubusercontent.com/jinqiu-deng/config/master/.tmux.conf" -o ~/.tmux.conf
 fi
 
 # Download .gitconfig
 if [ ! -e "$HOME/.gitconfig" ]; then
     printf "Download .gitconfig"
-    curl "https://raw.githubusercontent.com/DengJinqiu/config/master/.gitconfig" -o ~/.gitconfig
+    curl "https://raw.githubusercontent.com/jinqiu-deng/config/master/.gitconfig" -o ~/.gitconfig
 fi
 
 printf "End .profile\n"
