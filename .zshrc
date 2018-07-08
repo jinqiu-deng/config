@@ -57,8 +57,7 @@ BULLETTRAIN_CONTEXT_SHOW=true
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vim-mode vi-mode)
-plugins=(zsh-autosuggestions)
+plugins=(git vim-mode vi-mode zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -91,9 +90,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim='/usr/local/bin/vim'
-alias dssh="boxer v "$VG_NAME
-alias pssh="ssh "$PD_NAME
-alias sync="boxer sync "$VG_NAME" uber/promotions uber/cronus"
 
 # use vi mode
 bindkey -v
