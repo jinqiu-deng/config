@@ -58,6 +58,7 @@ BULLETTRAIN_CONTEXT_SHOW=true
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git vim-mode vi-mode)
+plugins=(zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -89,10 +90,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-# alias vim='/usr/local/bin/vim'
+alias vim='/usr/local/bin/vim'
 alias dssh="boxer v "$VG_NAME
 alias pssh="ssh "$PD_NAME
 alias sync="boxer sync "$VG_NAME" uber/promotions uber/cronus"
 
 # use vi mode
 bindkey -v
+bindkey '^n' autosuggest-accept
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
