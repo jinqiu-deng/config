@@ -44,7 +44,7 @@ ZSH=$HOME/.oh-my-zsh
 if [ ! -d "$ZSH" ]; then
     printf "${BLUE}Installing oh-my-zsh...${NORMAL}\n"
 
-    env git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git $ZSH || {
+    env git clone --depth=1 https://github.com/jinqiu-deng/oh-my-zsh.git $ZSH || {
     printf "${YELLOW}Error: git clone of oh-my-zsh repo failed.${NORMAL}\n"
     exit 1
     }
