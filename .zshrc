@@ -1,11 +1,14 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=/usr/local/bin:/usr/local/sbin:$HOME/bin:$PATH
+export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 export VG_NAME=lexus-quest-9
 export PD_NAME=adhoc04-sjc1
 export TZ=/usr/share/zoneinfo/Asia/Shanghai
+
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -89,9 +92,25 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vim='/usr/local/bin/vim'
+alias vim='/usr/bin/vi'
 
 # use vi mode
 bindkey -v
 bindkey '^n' autosuggest-accept
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/dengjinqiu/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/dengjinqiu/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/dengjinqiu/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/dengjinqiu/opt/anaconda3/bin:$PATH"
+    fi
+fi
+export PATH="/Users/dengjinqiu/opt/anaconda3/bin:$PATH"
+unset __conda_setup
+# <<< conda initialize <<<
