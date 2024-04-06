@@ -8,6 +8,10 @@ export PD_NAME=adhoc04-sjc1
 export TZ=/usr/share/zoneinfo/Asia/Shanghai
 
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="/Users/dengjinqiu/opt/anaconda3/bin:$PATH"
+
+export JAVA_HOME=$(/usr/libexec/java_home)
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -111,6 +115,5 @@ else
         export PATH="/Users/dengjinqiu/opt/anaconda3/bin:$PATH"
     fi
 fi
-export PATH="/Users/dengjinqiu/opt/anaconda3/bin:$PATH"
 unset __conda_setup
 # <<< conda initialize <<<
